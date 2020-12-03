@@ -1,34 +1,34 @@
-const fs = require('fs');
-const chalk = require('chalk');
+const fs = require("fs");
+const chalk = require("chalk");
 
 function readFromFile(path) {
-    return fs.readFileSync(path, 'utf8');
+  return fs.readFileSync(path, "utf8");
 }
 
-function test(name, solution, sampleExpected) {
-    console.log(chalk.magenta.underline.bold(`\nTESTING ${name}`))
-    const sampleInput = readFromFile('input_sample.txt');
-    console.group('Running sample...');
-    const sampleActual = solution(sampleInput);
-    console.groupEnd();
+function run(name, solution, sampleExpected) {
+  console.log(chalk.magenta.underline.bold(`\nTESTING ${name}`));
+  const sampleInput = readFromFile("input_sample.txt");
+  console.group("Running sample...");
+  const sampleActual = solution(sampleInput);
+  console.groupEnd();
 
-    if (sampleActual !== sampleExpected) {
-        console.error(chalk.bgRed('FAILED'), {
-            expected: sampleExpected,
-            actual: sampleActual,
-        });
-        return false;
-    } else {
-        console.log(chalk.green('Passed'));
-    }
+  if (sampleActual !== sampleExpected) {
+    console.error(chalk.bgRed("FAILED"), {
+      expected: sampleExpected,
+      actual: sampleActual,
+    });
+    return false;
+  } else {
+    console.log(chalk.green("Passed"));
+  }
 
-    console.group('Running problem...');
-    const problemInput = readFromFile('input_problem.txt');
-    const problemActual = solution(problemInput);
-    console.groupEnd();
-    console.log({result: problemActual});
+  console.group("Running problem...");
+  const problemInput = readFromFile("input_problem.txt");
+  const problemActual = solution(problemInput);
+  console.groupEnd();
+  console.log({ result: problemActual });
 
-    return true;
+  return true;
 }
 
-module.exports = {test};
+module.exports = { run };

@@ -1,20 +1,20 @@
-const { test } = require('../utils');
+const { run } = require("../utils");
 
 const solution = (input) => {
-    const numbers = input.split('\n').map(Number);
+  const numbers = input.split("\n").map(Number);
 
-    for (let i = 0; i < numbers.length; i++) {
-        for (let j = i + 1; j < numbers.length; j++) {
-            const ni = numbers[i];
-            const nj = numbers[j];
+  for (let i = 0; i < numbers.length; i++) {
+    for (let j = i + 1; j < numbers.length; j++) {
+      const ni = numbers[i];
+      const nj = numbers[j];
 
-            if (ni + nj === 2020) {
-                return ni * nj;
-            }
-        }
+      if (ni + nj === 2020) {
+        return ni * nj;
+      }
     }
+  }
 
-    return -1;
-}
+  return -1;
+};
 
-test('Day01 - Part 1', solution, 514579);
+run("Day01 - Part 1", solution, 514579);
