@@ -1,5 +1,3 @@
-const { run } = require("../utils");
-
 const reg = /(\d+)-(\d+) (\w): (.*)/g;
 const solution = (input) => {
   return input.split("\n").filter((line) => {
@@ -18,4 +16,4 @@ const solution = (input) => {
   }).length;
 };
 
-run("Day02 - Part 2", solution, 1);
+module.exports = solution;

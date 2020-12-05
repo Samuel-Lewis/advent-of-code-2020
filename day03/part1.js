@@ -1,5 +1,3 @@
-const { run } = require("../utils");
-
 const solution = (input) => {
   const grid = input
     .split("\n")
@@ -24,4 +22,4 @@ const solution = (input) => {
   return trees;
 };
 
-run("Day03 - Part 1", solution, 7);
+module.exports = solution;

@@ -1,5 +1,3 @@
-const { run } = require("../utils");
-
 const solution = (input) => {
   const numbers = input.split("\n").filter(String).map(Number);
 
@@ -19,4 +17,6 @@ const solution = (input) => {
   return -1;
 };
 
-run("Day01 - Part 2", solution, 241861950);
+// run("Day01 - Part 2", solution, 241861950);
+
+module.exports = solution;

@@ -1,5 +1,3 @@
-const { run } = require("../utils");
-
 const search = (sequence, min, max) => {
   // true => take low
 
@@ -35,4 +33,4 @@ const solution = (input) => {
   return ids[0] - 1;
 };
 
-run("Day05 - Part 1", solution, undefined);
+module.exports = solution;

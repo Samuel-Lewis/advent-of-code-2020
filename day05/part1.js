@@ -1,5 +1,3 @@
-const { run } = require("../utils");
-
 const search = (sequence, min, max) => {
   // true => take low
 
@@ -34,4 +32,4 @@ const solution = (input) => {
   return Math.max(...ids);
 };
 
-run("Day05 - Part 1", solution, 357);
+module.exports = solution;

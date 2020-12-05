@@ -1,7 +1,4 @@
-const { run } = require("../utils");
-
 const keys = ["byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid", "cid"];
-
 const blankData = () => {
   return {
     byr: false, // (Birth Year)
@@ -55,4 +52,6 @@ const solution = (input) => {
   return valid;
 };
 
-run("Day04 - Part 1", solution, 2);
+// run("Day04 - Part 1", solution, 2);
+
+module.exports = solution;
