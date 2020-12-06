@@ -52,6 +52,4 @@ const solution = (input) => {
   return valid;
 };
 
-// run("Day04 - Part 1", solution, 2);
-
 module.exports = solution;

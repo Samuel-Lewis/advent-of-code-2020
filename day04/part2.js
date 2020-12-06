@@ -91,6 +91,4 @@ const solution = (input) => {
   return passports.filter(check).length;
 };
 
-// run("Day04 - Part 2", solution, 4);
-
 module.exports = solution;
