@@ -39,7 +39,6 @@ const solution = (input) => {
 
       const instCopy = [...array];
       instCopy[index] = `${op === "jmp" ? "nop" : "jmp"} ${dist}`;
-
       return attempt(instCopy);
     })
     .filter(Number)[0];
